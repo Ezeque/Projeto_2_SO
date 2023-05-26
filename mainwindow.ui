@@ -78,32 +78,6 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>400</x>
-      <y>340</y>
-      <width>99</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Ligar</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>340</y>
-      <width>98</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Parar</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_trilho14">
     <property name="geometry">
      <rect>
@@ -264,38 +238,6 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_trem3">
-    <property name="geometry">
-     <rect>
-      <x>770</x>
-      <y>90</y>
-      <width>21</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLabel { background: red}</string>
-    </property>
-    <property name="text">
-     <string>T3</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_trem4">
-    <property name="geometry">
-     <rect>
-      <x>880</x>
-      <y>230</y>
-      <width>21</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLabel { background: red}</string>
-    </property>
-    <property name="text">
-     <string>T4</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_trem2">
     <property name="geometry">
      <rect>
@@ -315,8 +257,8 @@
    <widget class="QLabel" name="label_trem1">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>250</y>
+      <x>260</x>
+      <y>300</y>
       <width>21</width>
       <height>17</height>
      </rect>
@@ -348,7 +290,7 @@
     <property name="geometry">
      <rect>
       <x>650</x>
-      <y>210</y>
+      <y>160</y>
       <width>21</width>
       <height>17</height>
      </rect>
@@ -358,6 +300,38 @@
     </property>
     <property name="text">
      <string>T5</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_trem4">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>300</y>
+      <width>21</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { background: red}</string>
+    </property>
+    <property name="text">
+     <string>T4</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_trem3">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>40</y>
+      <width>21</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { background: red}</string>
+    </property>
+    <property name="text">
+     <string>T3</string>
     </property>
    </widget>
   </widget>
