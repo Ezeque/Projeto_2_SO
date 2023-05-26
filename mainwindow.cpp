@@ -14,6 +14,10 @@ MainWindow::MainWindow(QWidget *parent) :
     trem4 = new Trem(4,780,300);
     trem5 = new Trem(5,770,90);
 
+    //Inicializa as áreas criticas com seus valores
+
+
+    //Inicia a corrida dos trens
     trem1->start();
     trem2->start();
     trem3->start();

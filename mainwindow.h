@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <array>
 #include "trem.h"
 
 namespace Ui {
@@ -29,6 +30,15 @@ private:
     Trem *trem3;
     Trem *trem4;
     Trem *trem5;
+
+    //Cria áreas críticas
+    std::array<int, 4> area1;
+    std::array<int, 4> area2;
+    std::array<int, 4> area3;
+    std::array<int, 4> area4;
+    std::array<int, 4> area5;
+    std::array<int, 4> area6;
+    std::array<int, 4> area7;
 };
 
 #endif // MAINWINDOW_H
