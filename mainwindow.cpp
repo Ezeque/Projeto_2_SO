@@ -8,11 +8,17 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     //Cria o trem com seu (ID, posição X, posição Y)
-    trem1 = new Trem(1,60,30);
-    trem2 = new Trem(2,330,30);
-    trem3 = new Trem(3,330,150);
-    trem4 = new Trem(4,400,30);
-    trem5 = new Trem(5,410,30);
+    trem1 = new Trem(1,20,250);
+    trem2 = new Trem(2,360,40);
+    trem3 = new Trem(3,510,300);
+    trem4 = new Trem(4,880,230);
+    trem5 = new Trem(5,770,90);
+
+    trem1->start();
+    trem2->start();
+    trem3->start();
+    trem4->start();
+    trem5->start();
 
     /*
      * Conecta o sinal UPDATEGUI à função UPDATEINTERFACE.
@@ -62,28 +68,4 @@ void MainWindow::updateInterface(int id, int x, int y){
 MainWindow::~MainWindow()
 {
     delete ui;
-}
-
-/*
- * Ao clicar, trens começam execução
- */
-void MainWindow::on_pushButton_clicked()
-{
-    trem1->start();
-    trem2->start();
-    trem3->start();
-    trem4->start();
-    trem5->start();
-}
-
-/*
- * Ao clicar, trens param execução
- */
-void MainWindow::on_pushButton_2_clicked()
-{
-    trem1->terminate();
-    trem2->terminate();
-    trem3->terminate();
-    trem4->terminate();
-    trem5->terminate();
 }
