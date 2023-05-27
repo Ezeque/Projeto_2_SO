@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <array>
 #include "trem.h"
 
 namespace Ui {
@@ -13,6 +14,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
+    static std::array<int, 6> localTrens;
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
