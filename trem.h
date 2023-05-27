@@ -38,6 +38,14 @@ private:
    int isArea6();
    int isArea7();
 
+   void verifica0();
+   void verifica1();
+   void verifica2();
+   void verifica3();
+   void verifica4();
+   void verifica5();
+   void verifica6();
+
 };
 
 #endif // TREM_H
