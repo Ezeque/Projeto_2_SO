@@ -37,27 +37,27 @@ void Trem::verifica0(){
         mutex[0].unlock();
     }
 }
-
+//Os métodos isAreaX tem lógicas análogas, adaptando-se a área critica que representam.
 int Trem::isArea1(){
-    if((x == 210 && y == 160) || (x == 390 && y == 160)){
+    if((x == 210 && y == 160) || (x == 390 && y == 160)){ //Verifica se a posição do trem corresponde à "entrada" da área crítica
         return 1;
     }
-    else if((x == 230 && y == 140) || (x == 370 && y == 180)){
+    else if((x == 230 && y == 140) || (x == 370 && y == 180)){ //Verifica se a posição do trem corresponde à "saída" da área crítica
         return -1;
     }
     return 0;
 }
-
+//Os métodos verificaX tem lógicas análogas, adaptando-se a área critica que representam.
 void Trem::verifica1(){
-    if (isArea1() == 1){
-        mutex[1].lock();
-        if(areasCriticas[1] == false){
-            areasCriticas[1] = true;
+    if (isArea1() == 1){ //Verifica se o objeto está entrando na região crítica
+        mutex[1].lock(); // Trava o mutex
+        if(areasCriticas[1] == false){ //Verifica se a área crítica está desocupada
+            areasCriticas[1] = true; // Marca ela como ocupada
         }
     }
-    else if(isArea1() == -1 && areasCriticas[1] == true){// Verificando se a região crítica 1 está ocupado
-        areasCriticas[1] = false;
-        mutex[1].unlock();
+    else if(isArea1() == -1 && areasCriticas[1] == true){// Verificando se a região crítica 1 está ocupado e o objeto está saindo
+        areasCriticas[1] = false; //Marca como desocupada
+        mutex[1].unlock(); //Destrava o mutex
     }
 }
 
@@ -185,10 +185,10 @@ void Trem::run(){
     while(true){
         switch(ID){
         case 1:     //Trem 1
-            //VERIFICANDO REGIÃO CRÍTICA 1
+            //VERIFICA E BLOQUEIA/DESBLOQUEIA REGIÃO CRÍTICA 1
             verifica1();
 
-            //VERIFICANDO REGIÃO CRÍTICA 5
+            //VERIFICA E BLOQUEIA/DESBLOQUEIA REGIÃO CRÍTICA 5
             verifica5();
 
             if (y == 300 && x >140)
@@ -204,13 +204,13 @@ void Trem::run(){
             break;
 
         case 2: //Trem 2
-            //VERIFICANDO REGIÃO CRÍTICA 0
+            //VERIFICA E BLOQUEIA/DESBLOQUEIA REGIÃO CRÍTICA 0
             verifica0();
 
-            //VERIFICANDO REGIÃO CRÍTICA 1
+            //VERIFICA E BLOQUEIA/DESBLOQUEIA REGIÃO CRÍTICA 1
             verifica1();
 
-            //VERIFICANDO REGIÃO CRÍTICA 2
+            //VERIFICA E BLOQUEIA/DESBLOQUEIA REGIÃO CRÍTICA 2
             verifica2();
 
             if (y == 160 && x >230)
@@ -225,13 +225,13 @@ void Trem::run(){
             break;
 
         case 3: //Trem 3
-            //VERIFICANDO REGIÃO CRÍTICA 0
+            //VERIFICA E BLOQUEIA/DESBLOQUEIA REGIÃO CRÍTICA 0
             verifica0();
 
-            //VERIFICANDO REGIÃO CRÍTICA 3
+            //VERIFICA E BLOQUEIA/DESBLOQUEIA REGIÃO CRÍTICA 3
             verifica3();
 
-            //VERIFICANDO REGIÃO CRÍTICA 4
+            //VERIFICA E BLOQUEIA/DESBLOQUEIA REGIÃO CRÍTICA 4
             verifica4();
 
             if (y == 160 && x >500)
@@ -246,15 +246,11 @@ void Trem::run(){
             break;
 
         case 4: //Trem 4
-            //VERIFICANDO REGIÃO CRÍTICA 4
+            //VERIFICA E BLOQUEIA/DESBLOQUEIA REGIÃO CRÍTICA 4
             verifica4();
 
-            //VERIFICANDO REGIÃO CRÍTICA 6
+            //VERIFICA E BLOQUEIA/DESBLOQUEIA REGIÃO CRÍTICA 6
             verifica6();
-            else if(isArea6() == -1 && areasCriticas[6] == true){// Verificando se a região crítica 1 está ocupado
-                areasCriticas[6] = false;
-                mutex[6].unlock();
-            }
 
             if (y == 300 && x >650)
                 x-=10;
@@ -268,16 +264,16 @@ void Trem::run(){
             break;
 
         case 5: //Trem 5
-            //VERIFICANDO REGIÃO CRÍTICA 2
+            //VERIFICA E BLOQUEIA/DESBLOQUEIA REGIÃO CRÍTICA 2
             verifica2();
 
-            //VERIFICANDO REGIÃO CRÍTICA 3
+            //VERIFICA E BLOQUEIA/DESBLOQUEIA REGIÃO CRÍTICA 3
             verifica3();
 
-            //VERIFICANDO REGIÃO CRÍTICA 5
+            //VERIFICA E BLOQUEIA/DESBLOQUEIA REGIÃO CRÍTICA 5
             verifica5();
 
-            //VERIFICANDO REGIÃO CRÍTICA 6
+            //VERIFICA E BLOQUEIA/DESBLOQUEIA REGIÃO CRÍTICA 6
             verifica6();
 
             if (y == 300 && x >370)
