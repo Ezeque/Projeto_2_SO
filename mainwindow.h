@@ -14,6 +14,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
+    static std::array<int, 6> localTrens;
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 

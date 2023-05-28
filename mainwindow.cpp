@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+std::array<int,6> MainWindow::localTrens{0,0,0,0,0,0};
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -9,10 +11,10 @@ MainWindow::MainWindow(QWidget *parent) :
 
     //Cria o trem com seu (ID, posição X, posição Y)
     trem1 = new Trem(1,260,300);
-    trem2 = new Trem(2,360,40);
-    trem3 = new Trem(3,650,40);
-    trem4 = new Trem(4,780,300);
-    trem5 = new Trem(5,770,90);
+    trem2 = new Trem(2,520,40);
+    trem3 = new Trem(3,600,40);
+    trem4 = new Trem(4,690,300);
+    trem5 = new Trem(5,370,270);
 
     //Inicializa as áreas criticas com seus valores
 
