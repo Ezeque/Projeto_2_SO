@@ -1,4 +1,4 @@
-#include "areacritica.h"
+#include "AreaCritica.h"
 
 AreaCritica::AreaCritica(std::array<int,2> pos1, std::array<int,2> pos2)
 {

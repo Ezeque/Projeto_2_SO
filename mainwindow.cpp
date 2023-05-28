@@ -86,20 +86,15 @@ void MainWindow::on_velocidadeT2_valueChanged(int value)
     trem2->setVelocidade(value);
 }
 
-
 void MainWindow::on_velocidadeT3_valueChanged(int value)
 {
     trem3->setVelocidade(value);
 }
 
-
 void MainWindow::on_velocidadeT4_valueChanged(int value)
 {
     trem4->setVelocidade(value);
 }
-
-
-
 
 void MainWindow::on_velocidadeT5_valueChanged(int value)
 {

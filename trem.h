@@ -37,7 +37,6 @@ private:
    int isArea4();
    int isArea5();
    int isArea6();
-   int isArea7();
 
    void verifica0();
    void verifica1();
