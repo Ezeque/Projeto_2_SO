@@ -13,7 +13,11 @@ Trem::Trem(int ID, int x, int y){
     this->ID = ID;
     this->x = x;
     this->y = y;
-    velocidade = 100;
+    this->velocidade = 100;
+}
+
+void Trem::setVelocidade(int velocidade){ //Setter de velocidade
+    this->velocidade = velocidade;
 }
 
 int Trem::isArea0(){
@@ -194,8 +198,14 @@ void Trem::verifica6(){
 //Função a ser executada após executar trem->START
 void Trem::run(){
     while(true){
+
+        if(this->velocidade == 0){
+            continue;
+        }
+
         switch(ID){
         case 1:     //Trem 1
+
             //VERIFICA E BLOQUEIA/DESBLOQUEIA REGIÃO CRÍTICA 1
             verifica1();
 
@@ -301,7 +311,7 @@ void Trem::run(){
         default:
             break;
         }
-        msleep(velocidade);
+        msleep(230 - velocidade); // Espera 230 - "velocidade" ms.
     }
 
 }

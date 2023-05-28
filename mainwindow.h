@@ -22,6 +22,17 @@ public:
 public slots:
     void updateInterface(int,int,int);
 
+private slots:
+    void on_velocidadeT2_valueChanged(int value);
+
+    void on_velocidadeT1_valueChanged(int value);
+
+    void on_velocidadeT3_valueChanged(int value);
+
+    void on_velocidadeT4_valueChanged(int value);
+
+    void on_velocidadeT5_valueChanged(int value);
+
 private:
     Ui::MainWindow *ui;
 
