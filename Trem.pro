@@ -13,12 +13,10 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-    areacritica.cpp \
         mainwindow.cpp \
     trem.cpp
 
 HEADERS  += mainwindow.h \
-    AreaCritica.h \
     trem.h
 
 FORMS    += mainwindow.ui
