@@ -10,11 +10,11 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     //Cria o trem com seu (ID, posição X, posição Y)
-    trem1 = new Trem(1,260,300);
-    trem2 = new Trem(2,500,40);
-    trem3 = new Trem(3,600,40);
-    trem4 = new Trem(4,690,300);
-    trem5 = new Trem(5,370,270);
+    trem1 = new Trem(1,140,300);
+    trem2 = new Trem(2,230,40);
+    trem3 = new Trem(3,770,40);
+    trem4 = new Trem(4,880,300);
+    trem5 = new Trem(5,500,300);
 
     //Inicializa as áreas criticas com seus valores
 
